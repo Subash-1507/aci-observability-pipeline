@@ -35,7 +35,7 @@ services:
     security_opt: ["no-new-privileges:true"]
 
   otel-collector:
-    image: otel/opentelemetry-collector-contrib:0.164.0@sha256:340c9ca6a36617084c6661bdc4f0fe92b7cda5a805d61673ec8db375fddc522b
+    image: otel/opentelemetry-collector-contrib:0.164.0-386@sha256:40392928d2b988b77e7525dbac33e5e3d9bedb40b9ff8c1f9119d92ca3a8a1c3
     command: ["--config=/etc/otelcol-contrib/config.yaml"] # Compose replaces only the arguments, not the program
     env_file: .env # vendor API keys; only the Collector gets them, never the API
     ports:
